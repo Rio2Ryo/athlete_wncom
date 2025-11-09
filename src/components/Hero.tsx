@@ -2,9 +2,38 @@
 
 import Image from 'next/image'
 import { useLanguage } from '@/contexts/LanguageContext'
+import CountdownTimer from '@/components/CountdownTimer'
+import { useState, useEffect } from 'react'
 
 export default function Hero() {
   const { t, language } = useLanguage()
+  const [countdown, setCountdown] = useState('')
+
+  useEffect(() => {
+    const targetDate = new Date('2025-11-11T11:00:00Z') // UTC time
+
+    const updateCountdown = () => {
+      const now = new Date()
+      const difference = targetDate.getTime() - now.getTime()
+
+      if (difference <= 0) {
+        setCountdown('Launched!')
+        return
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24))
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000)
+
+      setCountdown(`${days}d ${hours}h ${minutes}m ${seconds}s`)
+    }
+
+    updateCountdown() // Initial update
+    const interval = setInterval(updateCountdown, 1000) // Update every second
+
+    return () => clearInterval(interval) // Cleanup on unmount
+  }, [])
   const scrollToDetails = () => {
     const element = document.getElementById('project-overview')
     if (element) {
@@ -46,6 +75,7 @@ export default function Hero() {
       <div className="relative z-10 text-center max-w-7xl mx-auto px-4 transition-all duration-1500 pt-40 md:pt-48 lg:pt-56">
         {/* Title Section - Single Component */}
         <div className="mb-12">
+
           {/* Logo */}
           <div className="mb-6">
             <Image
@@ -57,6 +87,7 @@ export default function Hero() {
               priority
             />
           </div>
+
           <div
             className="inline-block"
             style={{
@@ -71,7 +102,10 @@ export default function Hero() {
               <div>MOTHER VEGETABLE PROJECT</div>
             </h1>
           </div>
+
           <div className="w-40 md:w-48 h-1.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto rounded-full mt-6 opacity-80"></div>
+
+          <p className="text-green-400 font-bold text-lg sm:text-xl md:text-3xl lg:text-4xl mt-4">{countdown || 'Calculating...'}</p>
         </div>
 
 
