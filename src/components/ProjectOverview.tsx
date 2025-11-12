@@ -20,7 +20,7 @@ export default function ProjectOverview() {
             <p className="hidden md:block leading-[2] whitespace-pre-line">
               {t({
                 JP: `MOTHER VEGETABLE PROJECTは\n2つのオンリーワン事業を中心として地球とすべての生命の回復・修正を目指す画期的なプロジェクトです。\n\nこのプロセスにおいて、各施設は24時間365日CO2を吸収し酸素を生成することで大気を浄化し、\n同時に生成されるマザーベジタブル製品および魚貝類の養殖業により、人間と生物の健康向上に貢献します。\n\nまたその施設を世界各地に展開することで、さらに8つの産業分野に発展します。`,
-                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking project that aims to restore and revitalize the Earth and all life,\ncentered around two unique businesses.\n\nThrough this process, each facility purifies the atmosphere by absorbing CO₂ and generating oxygen 24 hours a day, 365 days a year,\nwhile simultaneously contributing to improving the health of humans and living organisms through Mother Vegetable products and aquaculture of fish and shellfish.\n\nFurthermore, by expanding these facilities around the world,\nit will develop into eight additional industrial sectors.`
+                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking project that aims to restore and revitalize the Earth and all life,\ncentered around two unique businesses.\n\nThrough this process, each facility purifies the atmosphere by absorbing CO₂\nand generating oxygen 24 hours a day, 365 days a year,\nwhile simultaneously contributing to improving the health of humans\nand living organisms through Mother Vegetable products and aquaculture of fish and shellfish.\n\nFurthermore, by expanding these facilities around the world,\nit will develop into eight additional industrial sectors.`
               })}
             </p>
 
