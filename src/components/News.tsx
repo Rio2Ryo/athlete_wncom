@@ -13,7 +13,7 @@ export default function News() {
     <div className="w-full bg-black pt-6 pb-14 lg:pb-20">
       <div className="text-center mb-12">
         <span className="inline-block bg-green-500/20 border border-green-500/50 text-green-400 px-4 py-2 rounded-full text-sm">
-          {t({ JP: '5. ニュース', EN: '5. News' })}
+          {t({ JP: '4. ニュース', EN: '4. News' })}
         </span>
       </div>
       <h2 className="text-3xl md:text-4xl font-bold text-white mb-12 text-center">
