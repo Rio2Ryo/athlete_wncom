@@ -35,7 +35,7 @@ export default function Home() {
         <TeamMembers />
         <Partners />
         {/*<TokenInfo />*/}
-        <News />
+        {/*<News />*/}
         {/*<FAQ />*/}
         <Footer />
       </main>
