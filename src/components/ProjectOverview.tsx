@@ -13,22 +13,22 @@ export default function ProjectOverview() {
             {t({ JP: '1. エグゼクティブサマリー', EN: '1. Executive Summary' })}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
-            {t({ JP: '２つのオンリーワン', EN: 'Two Only Ones' })}
+            {t({ JP: '２つのオンリーワン', EN: 'Two Unique Elements' })}
           </h2>
           <div className="text-xs md:text-base text-gray-300 max-w-5xl mx-auto">
             {/* Desktop View */}
             <p className="hidden md:block leading-[2] whitespace-pre-line">
               {t({
                 JP: `MOTHER VEGETABLE PROJECTは\n2つのオンリーワン事業を中心として地球とすべての生命の回復・修正を目指す画期的なプロジェクトです。\n\nこのプロセスにおいて、各施設は24時間365日CO2を吸収し酸素を生成することで大気を浄化し、\n同時に生成されるマザーベジタブル製品および魚貝類の養殖業により、人間と生物の健康向上に貢献します。\n\nまたその施設を世界各地に展開することで、さらに8つの産業分野に発展します。`,
-                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking initiative that aims to restore and revitalize the Earth and all forms of life,\ncentered around two one-of-a-kind core businesses.\n\nThrough this process, each facility operates 24 hours a day, 365 days a year, absorbing CO₂\nand generating oxygen to purify the atmosphere.\nAt the same time, the production of Mother Vegetable products and the aquaculture of fish and shellfish\ncontribute to improving the health of both humans and other living beings.\n\nFurthermore, by expanding these facilities around the world,\nthe project will evolve into eight additional industrial sectors.`
+                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking project that aims to restore and revitalize the Earth and all life,\ncentered around two unique businesses.\n\nThrough this process, each facility purifies the atmosphere by absorbing CO₂ and generating oxygen 24 hours a day, 365 days a year,\nwhile simultaneously contributing to improving the health of humans and living organisms through Mother Vegetable products and aquaculture of fish and shellfish.\n\nFurthermore, by expanding these facilities around the world,\nit will develop into eight additional industrial sectors.`
               })}
             </p>
 
             {/* Mobile View */}
             <p className="block md:hidden leading-[2] whitespace-pre-line">
               {t({
-               JP: `MOTHER VEGETABLE PROJECTは\n2つのオンリーワン事業を中心として\n地球とすべての生命の回復・修正を目指す\n画期的なプロジェクトです。\n\nこのプロセスにおいて、各施設は24時間365日\nCO2を吸収し酸素を生成することで大気を浄化し、\n同時に生成されるマザーベジタブル製品\nおよび魚貝類の養殖業により、\n人間と生物の健康向上に貢献します。\n\nまたその施設を世界各地に展開することで、\nさらに8つの産業分野に発展します。`,
-                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking initiative that aims to restore\nand revitalize the Earth and all forms of life,\ncentered around two one-of-a-kind core businesses.\n\nThrough this process,\neach facility operates 24 hours a day,\n365 days a year, absorbing CO₂\nand generating oxygen\nto purify the atmosphere.\nAt the same time, the production of\nother Vegetable products\nand the aquaculture of fish and shellfish\ncontribute to improving the health of both\nhumans and other living beings.\n\nFurthermore, by expanding\nthese facilities around the world,\nthe project will evolve into\neight additional industrial sectors.`
+               JP: `MOTHER VEGETABLE PROJECTは\n2つのオンリーワン事業を中心として\n地球とすべての生命の回復・修正を目指す\n画期的なプロジェクトです。\n\nここのプロセスにおいて、各施設は24時間365日CO2を吸収し\n酸素を生成することで大気を浄化し、\n同時に生成されるマザーベジタブル製品\nおよび魚貝類の養殖業により、人間と生物の健康向上に貢献します。\n\nまたその施設を世界各地に展開することで、\nさらに8つの産業分野に発展します。`,
+                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking project that aims to restore\nand revitalize the Earth and all life,\ncentered around two unique businesses.\n\nThrough this process,\neach facility purifies the atmosphere\nby absorbing CO₂ and generating oxygen\n24 hours a day, 365 days a year,\nwhile simultaneously contributing to\nimproving the health of humans\nand living organisms through\nMother Vegetable products\nand aquaculture of fish and shellfish.\n\nFurthermore, by expanding\nthese facilities around the world,\nit will develop into\neight additional industrial sectors.`
               })}
             </p>
           </div>
@@ -64,20 +64,20 @@ export default function ProjectOverview() {
                   {t({
                     JP: `地球最初の生命が人類にまで至っている進化を研究した結果
 以下のものを創生することが可能となる。`,
-                    EN: `Through researching the evolution from Earth's first life to humanity,
+                    EN: `As a result of researching the evolution from Earth's first life forms to humanity,
 the following can be created:`
                   })}
                 </p>
 
                 <div className="space-y-2">
                   <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '①食品', EN: '①Food' })}</p>
-                  <p className="text-white text-sm md:text-base">{t({ JP: '1つの生命体から人類に必要な48種類の栄養素を含む食品', EN: 'Foods containing 48 essential nutrients from a single life form' })}</p>
+                  <p className="text-white text-sm md:text-base">{t({ JP: '1つの生命体から人類に必要な48種類の栄養素を含む食品', EN: 'Food containing 48 types of nutrients necessary for humanity from a single life form' })}</p>
 
                   <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '②スキンケア', EN: '②Skincare' })}</p>
-                  <p className="text-white text-sm md:text-base">{t({ JP: '皮膚の再生に効果のあるスキンケア', EN: 'Skincare effective for skin regeneration' })}</p>
+                  <p className="text-white text-sm md:text-base">{t({ JP: '皮膚の再生に効果のあるスキンケア', EN: 'Skincare products effective for skin regeneration' })}</p>
 
                   <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '③魚貝類の養殖', EN: '③Aquaculture' })}</p>
-                  <p className="text-white text-sm md:text-base">{t({ JP: '化学物質を一切使用しない高タンパク質の魚貝類の養殖', EN: 'Aquaculture of fish and shellfish without any chemicals' })}</p>
+                  <p className="text-white text-sm md:text-base">{t({ JP: '化学物質を一切使用しない高タンパク質の魚貝類の養殖', EN: 'Aquaculture of high-protein fish and shellfish without using any chemicals' })}</p>
                 </div>
               </div> 
              
@@ -117,24 +117,24 @@ the following can be created:`
 
                 <div className="space-y-2">
                   <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '①Carbon Rebirth', EN: '①Carbon Rebirth' })}</p>
-                  <p className="text-white mb-3 text-sm md:text-base">{t({ JP: 'マザーベジタブル生産によるCO2の吸収（天然スギの700倍）およびO2の排出により小さな地球を再現', EN: 'Recreating a small Earth through CO2 absorption (700 times that of natural cedar) and O2 emission via Mother Vegetable production' })}</p>
+                  <p className="text-white mb-3 text-sm md:text-base">{t({ JP: 'マザーベジタブル生産によるCO2の吸収（天然スギの700倍）およびO2の排出により小さな地球を再現', EN: 'Recreating a small Earth through CO2 absorption (700 times that of natural cedar) and O2 emission by Mother Vegetable production' })}</p>
 
                   <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '②ZERO Carbon Energy', EN: '②ZERO Carbon Energy' })}</p>
-                  <p className="text-white mb-3 text-sm md:text-base">{t({ JP: '外部電力、化石燃料などCO2を排出するエネルギーを一切使用しなく、小さな地球を再現', EN: 'Recreating a small Earth without using any CO2-emitting energy such as external electricity or fossil fuels' })}</p>
+                  <p className="text-white mb-3 text-sm md:text-base">{t({ JP: '外部電力、化石燃料などCO2を排出するエネルギーを一切使用しなく、小さな地球を再現', EN: 'Recreating a small Earth without using any CO2-emitting energy such as external electricity and fossil fuels' })}</p>
 
-                  <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '③カーボンクレジットの試算表', EN: '③Carbon Credit Estimate' })}</p>
-                  <p className="text-white text-sm md:text-base">{t({ JP: 'SEF 1 unit / 26m x 16m x 10階建 は面積にすると約0.5 ヘクタールとなる', EN: 'SEF 1 unit / 26m x 16m x 10 floors equals approximately 0.5 hectares in area' })}</p>
+                  <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '③カーボンクレジットの試算表', EN: '③Carbon Credit Estimation Table' })}</p>
+                  <p className="text-white text-sm md:text-base">{t({ JP: 'SEF 1 unit / 26m x 16m x 10階建 は面積にすると約0.5 ヘクタールとなる', EN: 'SEF 1 unit / 26m x 16m x 10 floors has an area of approximately 0.5 hectares' })}</p>
                 
                 <p className="leading-relaxed text-sm md:text-base">
                     {t({
                       JP: `一般的な0.5ヘクタールの天然スギのCO2吸収量は年間約4ton\nSEFはその700倍のCO2吸収量により年間約2,800tonとなる`,
-                      EN: `General 0.5 hectare natural cedar CO2 absorption is about 4 tons per year\nSEF absorbs 700 times more CO2, approximately 2,800 tons per year`
+                      EN: `A typical 0.5 hectare natural cedar forest absorbs approximately 4 tons of CO2 per year\nSEF absorbs 700 times more CO2, resulting in approximately 2,800 tons per year`
                     })}
                   </p>
                   <p className="leading-relaxed text-sm md:text-base">
                     {t({
                       JP: `一般的なカーボンクレジットの価格は1tonあたり約4,000円\nSEFは2,800ton x 4,000円 = 11,200,000円 / 年 の収益性がある`,
-                      EN: `General carbon credit price is about 4,000 yen per ton\nSEF has profitability of 2,800 tons x 4,000 yen = 11,200,000 yen / year`
+                      EN: `The typical carbon credit price is approximately 4,000 yen per ton\nSEF has profitability of 2,800 tons x 4,000 yen = 11,200,000 yen / year`
                     })}
                   </p>
 
@@ -145,7 +145,7 @@ the following can be created:`
                     >
                       {t({
                         JP: '金融機関向けカーボンクレジット試算表',
-                        EN: 'Carbon Credit Calculation Sheet for Financial Institutions'
+                        EN: 'Carbon Credit Estimation Table for Financial Institutions'
                       })}
                     </a>
                   </div>
