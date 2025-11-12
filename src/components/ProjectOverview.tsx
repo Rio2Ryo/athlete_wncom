@@ -15,54 +15,20 @@ export default function ProjectOverview() {
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
             {t({ JP: '２つのオンリーワン', EN: 'Two Only Ones' })}
           </h2>
-          <div className="text-sm md:text-base text-gray-300 max-w-5xl mx-auto">
+          <div className="text-xs md:text-base text-gray-300 max-w-5xl mx-auto">
             {/* Desktop View */}
             <p className="hidden md:block leading-[2] whitespace-pre-line">
               {t({
-                JP: `MOTHER VEGETABLE PROJECTは、
-地球と全ての生命の健康回復を目指す革命的な環境再生プロジェクトです。
-
-マザーベジタブルファクトリーを世界各地に展開することで、
-マザーベジタブルを生産し、8つの産業分野に供給します。
-
-このプロセスにおいて、各施設は24時間365日CO₂を吸収し
-酸素を生成することで大気を浄化し、
-同時に生産されるマザーベジタブル製品は人間と生物の健康向上に直接貢献します。`,
-                EN: `MOTHER VEGETABLE PROJECT is a revolutionary environmental regeneration project
-aimed at restoring the health of Earth and all life.
-
-By deploying Mother Vegetable factories worldwide,
-we produce Mother Vegetable and supply them to 8 industrial sectors.
-
-In this process, each facility purifies the atmosphere
-by absorbing CO₂ and generating oxygen 24/7,
-while the produced Mother Vegetable products directly contribute
-to improving human and biological health.`
+                JP: `MOTHER VEGETABLE PROJECTは\n2つのオンリーワン事業を中心として地球とすべての生命の回復・修正を目指す画期的なプロジェクトです。\n\nこのプロセスにおいて、各施設は24時間365日CO2を吸収し酸素を生成することで大気を浄化し、\n同時に生成されるマザーベジタブル製品および魚貝類の養殖業により、人間と生物の健康向上に貢献します。\n\nまたその施設を世界各地に展開することで、さらに8つの産業分野に発展します。`,
+                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking initiative that aims to restore and revitalize the Earth and all forms of life,\ncentered around two one-of-a-kind core businesses.\n\nThrough this process, each facility operates 24 hours a day, 365 days a year, absorbing CO₂\nand generating oxygen to purify the atmosphere.\nAt the same time, the production of Mother Vegetable products and the aquaculture of fish and shellfish\ncontribute to improving the health of both humans and other living beings.\n\nFurthermore, by expanding these facilities around the world,\nthe project will evolve into eight additional industrial sectors.`
               })}
             </p>
 
             {/* Mobile View */}
             <p className="block md:hidden leading-[2] whitespace-pre-line">
               {t({
-                JP: `MOTHER VEGETABLE PROJECTは、
-地球と全ての生命の健康回復を目指す革命的な環境再生プロジェクトです。
-
-マザーベジタブルファクトリーを世界各地に展開することで、
-マザーベジタブルを生産し、8つの産業分野に供給します。
-
-このプロセスにおいて、各施設は24時間365日CO₂を吸収し
-酸素を生成することで大気を浄化し、
-同時に生産されるマザーベジタブル製品は人間と生物の健康向上に直接貢献します。`,
-                EN: `MOTHER VEGETABLE PROJECT is a revolutionary environmental regeneration project
-aimed at restoring the health of Earth and all life.
-
-By deploying Mother Vegetable factories worldwide,
-we produce Mother Vegetable and supply them to 8 industrial sectors.
-
-In this process, each facility purifies the atmosphere
-by absorbing CO₂ and generating oxygen 24/7,
-while the produced Mother Vegetable products directly contribute
-to improving human and biological health.`
+               JP: `MOTHER VEGETABLE PROJECTは\n2つのオンリーワン事業を中心として\n地球とすべての生命の回復・修正を目指す\n画期的なプロジェクトです。\n\nこのプロセスにおいて、各施設は24時間365日\nCO2を吸収し酸素を生成することで大気を浄化し、\n同時に生成されるマザーベジタブル製品\nおよび魚貝類の養殖業により、\n人間と生物の健康向上に貢献します。\n\nまたその施設を世界各地に展開することで、\nさらに8つの産業分野に発展します。`,
+                EN: `The MOTHER VEGETABLE PROJECT is\na groundbreaking initiative that aims to restore\nand revitalize the Earth and all forms of life,\ncentered around two one-of-a-kind core businesses.\n\nThrough this process,\neach facility operates 24 hours a day,\n365 days a year, absorbing CO₂\nand generating oxygen\nto purify the atmosphere.\nAt the same time, the production of\nother Vegetable products\nand the aquaculture of fish and shellfish\ncontribute to improving the health of both\nhumans and other living beings.\n\nFurthermore, by expanding\nthese facilities around the world,\nthe project will evolve into\neight additional industrial sectors.`
               })}
             </p>
           </div>
