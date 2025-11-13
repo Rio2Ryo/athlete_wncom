@@ -49,7 +49,7 @@ export default function Home() {
           <div className="text-white text-xs md:text-sm text-center mt-2">
             <p>Mazavege-chan</p>
             <p>AI Agent</p>
-            <p>Coming Soon</p>
+            <p>Coming Soon!!</p>
           </div>
         </div>
       </main>
