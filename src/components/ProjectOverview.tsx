@@ -5,13 +5,11 @@ import { useLanguage } from '@/contexts/LanguageContext'
 export default function ProjectOverview() {
   const { t } = useLanguage()
   return (
-    <section id="project-overview" className="py-32 bg-black">
+    <section id="project-overview" className="pb-32 bg-black">
       <div className="container mx-auto px-4">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <span className="inline-block bg-green-500/20 border border-green-500/50 text-green-400 px-4 py-2 rounded-full text-sm mb-12">
-            {t({ JP: '1. エグゼクティブサマリー', EN: '1. Executive Summary' })}
-          </span>
+         
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
             {t({ JP: '２つのオンリーワン', EN: 'Two Only Ones' })}
           </h2>
@@ -53,7 +51,7 @@ export default function ProjectOverview() {
                 <div className="flex justify-center my-6">
                   <div>
                     <h3 className="text-green-400 text-xl md:text-2xl font-semibold text-center mb-10">
-                      {t({ JP: 'マザーベジタブル', EN: 'Mother Vegetable' })}
+                      {t({ JP: 'Mother Vegetable', EN: 'Mother Vegetable' })}
                     </h3>
                     <div className="w-48 h-48 rounded-2xl overflow-hidden shadow-lg">
                       <img
@@ -67,10 +65,9 @@ export default function ProjectOverview() {
 
                 <p className="text-gray-300 leading-[1.9] whitespace-pre-line mb-4 text-sm md:text-base">
                   {t({
-                    JP: `地球最初の生命が人類にまで至っている進化を研究した結果
-以下のものを創生することが可能となる。`,
-                    EN: `As a result of researching the evolution from Earth's first life forms to humanity,
-the following can be created:`
+                    JP: `地球最初の植物であるマザーベジタブルが人類に至った進化を研究し以下の3種類のマザーベジタブルを提供します。`,
+                    EN: `By researching the evolution of Mother Vegetable, Earth's first plant, that led to humanity,
+we offer the following three types of Mother Vegetable products:`
                   })}
                 </p>
 
@@ -134,7 +131,7 @@ the following can be created:`
                   <p className="text-white mb-3 text-sm md:text-base">{t({ JP: '外部電力、化石燃料などCO2を排出するエネルギーを一切使用しなく、小さな地球を再現。', EN: 'Recreating a small Earth without using any CO2-emitting energy such as external electricity and fossil fuels.' })}</p>
 
                   <p className="text-green-400 font-semibold text-sm md:text-base">{t({ JP: '③カーボンクレジットの試算表', EN: '③Carbon Credit Estimation Table' })}</p>
-                  <p className="text-white text-sm md:text-base">{t({ JP: 'SEF 1 unit / 26m x 16m x 10階建 は面積にすると約0.5 ヘクタールとなる。', EN: 'SEF 1 unit / 26m x 16m x 10 layers has an area of approximately 0.5 hectares.' })}</p>
+                  <p className="text-white text-sm md:text-base">{t({ JP: 'SEF 1 unit / 26m x 16m x 10階建 は面積にすると約0.5 ヘクタール。', EN: 'SEF 1 unit / 26m x 16m x 10 layers has an area of approximately 0.5 hectares.' })}</p>
                 
                 <p className="leading-relaxed text-sm md:text-base whitespace-pre-line">
                     {t({

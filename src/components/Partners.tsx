@@ -310,7 +310,7 @@ export default function Partners() {
         {/* Section Header */}
         <div className="text-center mb-16">
           <span className="inline-block bg-purple-500/20 border border-purple-500/50 text-purple-400 px-4 py-2 rounded-full text-sm mb-12">
-            {t({ JP: '3. パートナー・提携組織', EN: '3. Partners & Affiliated Organizations' })}
+            {t({ JP: '2. パートナー・提携組織', EN: '2. Partners & Affiliated Organizations' })}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-8">
             {t({ JP: 'パートナーシップ', EN: 'Partnerships' })}

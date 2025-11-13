@@ -18,9 +18,10 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-black border-t-2 border-green-400">
+    <footer className="bg-black">
       {/* Main Footer Content */}
       <div className="container mx-auto px-4 py-12">
+        <div className="w-full md:w-full h-1.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto rounded-full mt-0 opacity-80 mb-14"></div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Japan Office */}
           <div className="text-center md:text-left">
@@ -57,10 +58,11 @@ export default function Footer() {
             </p>
           </div>
         </div>
+        <div className="w-full md:w-full h-1.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto rounded-full mt-14 opacity-80 mb-6"></div>
       </div>
 
       {/* Legal Links & Copyright */}
-      <div className="border-t border-emerald-500/10">
+      <div className="">
         <div className="container mx-auto px-4 py-6">
           <div className="text-center space-y-4">
            
