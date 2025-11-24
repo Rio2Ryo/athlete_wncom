@@ -18,8 +18,8 @@ export default function Footer() {
   }
 
   return (
-    <footer className="bg-black">
-       <div className="bg-gray-900/50 backdrop-blur-md border border-green-500/20 rounded-xl p-8 mb-16 max-w-[90%] mx-auto">
+    <footer className="bg-black container">
+       <div className="bg-gray-900/50 backdrop-blur-md border border-green-500/20 rounded-xl p-8 mb-16 mx-auto">
         {/* Leaf Icon */}
         <div className="flex justify-center mb-4">
           <svg className="w-12 h-12 text-[#25C760]" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -30,13 +30,13 @@ export default function Footer() {
         </div>
 
         {/* Title */}
-        <h2 className="text-2xl md:text-3xl font-bold text-[#25C760] text-center mb-2">Mother Vegetable Group</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-[#25C760] text-center mb-8">Mother Vegetable Group</h2>
 
         {/* Decorative underline */}
-        <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#25C760] to-transparent mx-auto mb-8"></div>
+        <div className="w-32 h-1 bg-gradient-to-r from-transparent via-[#25C760] to-transparent mx-auto mb-16"></div>
 
         {/* Countries Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mx-auto text-center">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-[4.5rem] mx-auto text-center">
           <div className="text-[#25C760] text-base md:text-lg font-medium">Japan</div>
           <div className="text-[#25C760] text-base md:text-lg font-medium">Switzerland</div>
           <div className="text-[#25C760] text-base md:text-lg font-medium">Malaysia</div>
