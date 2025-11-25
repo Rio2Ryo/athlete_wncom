@@ -49,7 +49,7 @@ export default function ProjectOverview() {
                 </>
               ) : (
                 <>
-                  The MOTHER VEGETABLE PROJECT is{'\n'}the world's only project that aims to restore the Earth and all life,{'\n'}centered around two one-of-a-kind businesses.{'\n\n'}In this process, each facility purifies the atmosphere by absorbing CO<sub>2</sub>{'\n'}and generating oxygen 24 hours a day, 365 days a year,{'\n'}while simultaneously contributing to improving the health of humans{'\n'}and living organisms through Mother Vegetable products and the aquaculture of fish and shellfish.{'\n\n'}Furthermore, by expanding these facilities around the world,{'\n'}it will develop into eight additional industrial sectors.
+                  The MOTHER VEGETABLE PROJECT is{'\n'}the world&apos;s only project that aims to restore the Earth and all life,{'\n'}centered around two one-of-a-kind businesses.{'\n\n'}In this process, each facility purifies the atmosphere by absorbing CO<sub>2</sub>{'\n'}and generating oxygen 24 hours a day, 365 days a year,{'\n'}while simultaneously contributing to improving the health of humans{'\n'}and living organisms through Mother Vegetable products and the aquaculture of fish and shellfish.{'\n\n'}Furthermore, by expanding these facilities around the world,{'\n'}it will develop into eight additional industrial sectors.
                 </>
               )}
             </p>
@@ -62,7 +62,7 @@ export default function ProjectOverview() {
                 </>
               ) : (
                 <>
-                  The MOTHER VEGETABLE PROJECT is{'\n'}the world's only project that aims to restore{'\n'}the Earth and all life,{'\n'}centered around two one-of-a-kind businesses.{'\n\n'}In this process,{'\n'}each facility purifies the atmosphere{'\n'}by absorbing CO<sub>2</sub> and generating oxygen{'\n'}24 hours a day, 365 days a year,{'\n'}while simultaneously contributing to{'\n'}improving the health of humans{'\n'}and living organisms through{'\n'}Mother Vegetable products{'\n'}and the aquaculture of fish and shellfish.{'\n\n'}Furthermore, by expanding{'\n'}these facilities around the world,{'\n'}it will develop into{'\n'}eight additional industrial sectors.
+                  The MOTHER VEGETABLE PROJECT is{'\n'}the world&apos;s only project that aims to restore{'\n'}the Earth and all life,{'\n'}centered around two one-of-a-kind businesses.{'\n\n'}In this process,{'\n'}each facility purifies the atmosphere{'\n'}by absorbing CO<sub>2</sub> and generating oxygen{'\n'}24 hours a day, 365 days a year,{'\n'}while simultaneously contributing to{'\n'}improving the health of humans{'\n'}and living organisms through{'\n'}Mother Vegetable products{'\n'}and the aquaculture of fish and shellfish.{'\n\n'}Furthermore, by expanding{'\n'}these facilities around the world,{'\n'}it will develop into{'\n'}eight additional industrial sectors.
                 </>
               )}
             </p>
