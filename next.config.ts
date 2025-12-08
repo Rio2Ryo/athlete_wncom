@@ -56,6 +56,16 @@ const nextConfig: NextConfig = {
         source: "/confidence-howto/:path*",
         destination: "https://confidence-htu.vercel.app/confidence-howto/:path*",
       },
+
+      // ★ 追加: /athlete → mvathletefoundation.vercel.app
+      {
+        source: "/athlete",
+        destination: "https://mvathletefoundation.vercel.app/athlete",
+      },
+      {
+        source: "/athlete/:path*",
+        destination: "https://mvathletefoundation.vercel.app/athlete/:path*",
+      },
     ];
   },
 };
