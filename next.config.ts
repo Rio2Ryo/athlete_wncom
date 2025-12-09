@@ -53,7 +53,6 @@ const nextConfig: NextConfig = {
       },
 
       // ★ 追加: /athlete → mvathletefoundation.vercel.app
-      // 両方のパターンをケア（末尾スラッシュあり・なし両方を受け付けてdestinationは/付き）
       {
         source: "/athlete",
         destination: "https://mvathletefoundation.vercel.app/athlete/",
@@ -64,7 +63,7 @@ const nextConfig: NextConfig = {
       },
       {
         source: "/athlete/:path*",
-        destination: "https://mvathletefoundation.vercel.app/athlete/:path*",
+        destination: "https://mvathletefoundation.vercel.app/:path*",
       },
     ];
   },
