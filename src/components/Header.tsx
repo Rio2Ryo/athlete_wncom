@@ -6,6 +6,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 
 export default function Header() {
   const [activeSection, setActiveSection] = useState('')
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
 
   const scrollToSection = (sectionId: string) => {
@@ -30,6 +31,11 @@ export default function Header() {
     document.body.removeChild(link)
   }
 
+  const handleMenuClick = (url: string) => {
+    setIsMenuOpen(false)
+    window.location.href = url
+  }
+
   return (
     <header className="fixed top-0 left-0 right-0 bg-black/90 backdrop-blur-md border-b border-green-500/20" style={{ zIndex: 1100 }}>
       <div className="container mx-auto px-4 py-3">
@@ -44,15 +50,15 @@ export default function Header() {
             />
           </div>
 
-          {/* Navigation Menu */}
-          <nav className="flex items-center space-x-1 lg:space-x-2">
-             <button
+          {/* Desktop Navigation Menu */}
+          <nav className="hidden md:flex items-center space-x-1 lg:space-x-2">
+            <button
               onClick={() => window.location.href = 'https://mothervegetable.com/'}
               className="px-3 md:px-4 py-2 text-sm text-[#4ade80] hover:text-green-600 transition-all duration-300"
             >
               Food
             </button>
-             <button
+            <button
               onClick={() => window.location.href = 'https://mothervegetable.com/'}
               className="px-3 md:px-4 py-2 text-sm text-[#4ade80] hover:text-green-600 transition-all duration-300"
             >
@@ -64,22 +70,67 @@ export default function Header() {
             >
               Products
             </button>
-          
+
             <button
               onClick={() => setLanguage(language === 'EN' ? 'JP' : 'EN')}
               className="px-3 md:px-4 py-2 text-sm text-[#4ade80] hover:text-green-600 transition-all duration-300 border border-gray-600 rounded-md"
             >
               {language === 'EN' ? 'EN' : 'JP'}
             </button>
-            {/*<button
-              onClick={() => window.location.href = 'mailto:info@mothervegetables.com'}
-              className="px-3 md:px-4 py-2 text-sm bg-green-600 hover:bg-green-700 text-white rounded-lg font-medium transition-all duration-300"
-            >
-              事前登録
-            </button>*/}
           </nav>
+
+          {/* Mobile: Language Button + Hamburger */}
+          <div className="flex md:hidden items-center space-x-2">
+            <button
+              onClick={() => setLanguage(language === 'EN' ? 'JP' : 'EN')}
+              className="px-3 py-2 text-sm text-[#4ade80] hover:text-green-600 transition-all duration-300 border border-gray-600 rounded-md"
+            >
+              {language === 'EN' ? 'EN' : 'JP'}
+            </button>
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="p-2 text-[#4ade80] hover:text-green-600 transition-all duration-300"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              ) : (
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              )}
+            </button>
+          </div>
         </div>
       </div>
+
+      {/* Mobile Menu Overlay */}
+      {isMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-black/95 backdrop-blur-md border-b border-green-500/20">
+          <nav className="container mx-auto px-4 py-4">
+            <button
+              onClick={() => handleMenuClick('https://mothervegetable.com/')}
+              className="block w-full text-left px-4 py-4 text-[#4ade80] hover:text-green-600 transition-all duration-300 border-b border-gray-700"
+            >
+              Food
+            </button>
+            <button
+              onClick={() => handleMenuClick('https://mothervegetable.com/')}
+              className="block w-full text-left px-4 py-4 text-[#4ade80] hover:text-green-600 transition-all duration-300 border-b border-gray-700"
+            >
+              Cosmetic
+            </button>
+            <button
+              onClick={() => handleMenuClick('https://mothervegetable.com/')}
+              className="block w-full text-left px-4 py-4 text-[#4ade80] hover:text-green-600 transition-all duration-300 border-b border-gray-700"
+            >
+              Products
+            </button>
+          </nav>
+        </div>
+      )}
     </header>
   )
 }
