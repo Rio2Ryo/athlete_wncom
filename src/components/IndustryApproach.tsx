@@ -2,12 +2,12 @@
 
 export default function IndustryApproach() {
   const certifications = [
-    { id: 1, src: '/organic.png', alt: '100% Organic' },
-    { id: 2, src: '/vegan.png', alt: 'Certified Vegan' },
-    { id: 3, src: '/gmp.png', alt: 'GMP Quality' },
-    { id: 4, src: '/halal.png', alt: 'Halal' },
-    { id: 5, src: '/haccp.png', alt: 'HACCP' },
-    { id: 6, src: '/jfrl.png', alt: 'JFRL' },
+    { id: 1, src: '/partner_1.png', alt: '100% Organic' },
+    { id: 2, src: '/partner_2.png', alt: 'Certified Vegan' },
+    { id: 3, src: '/partner_3.png', alt: 'GMP Quality' },
+    { id: 4, src: '/partner_4.png', alt: 'Halal' },
+    { id: 5, src: '/partner_5.png', alt: 'HACCP' },
+    { id: 6, src: '/partner_6.png', alt: 'JFRL' },
   ]
 
   const trustItems = [
@@ -22,7 +22,7 @@ export default function IndustryApproach() {
         className="mx-auto px-8 py-12"
         style={{
           width: '90%',
-          maxWidth: '1200px',
+          maxWidth: '1500px',
           border: '2px solid #25c760',
           borderRadius: '8px',
         }}
@@ -35,16 +35,7 @@ export default function IndustryApproach() {
           Our Trust
         </h2>
 
-        {/* Gradient Line */}
-        <div
-          className="mx-auto mb-12"
-          style={{
-            width: '200px',
-            height: '4px',
-            background: 'linear-gradient(90deg, #25c760, #0a8f3a)',
-            borderRadius: '2px',
-          }}
-        />
+       <div className="w-40 md:w-48 h-1.5 bg-gradient-to-r from-transparent via-green-400 to-transparent mx-auto rounded-full mt-6 opacity-80"></div>
 
         {/* Certification Logos */}
         <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10 mb-12">
@@ -59,7 +50,7 @@ export default function IndustryApproach() {
         </div>
 
         {/* Trust Text */}
-        <div className="space-y-3 text-center">
+        <div className="space-y-1 text-center">
           {trustItems.map((item, index) => (
             <p key={index} className="text-sm md:text-base">
               <span className="text-green-400 font-semibold mr-4">{item.label}</span>
