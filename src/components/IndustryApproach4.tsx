@@ -397,8 +397,26 @@ export default function IndustryApproach() {
             style={{ zIndex: 9999 }}
             onClick={() => setIsPopupOpen(false)}
           >
+            <style>{`
+              .custom-scrollbar::-webkit-scrollbar {
+                width: 12px;
+              }
+              .custom-scrollbar::-webkit-scrollbar-track {
+                background: #000;
+                border-left: 1px solid #25c760;
+                border-right: 1px solid #25c760;
+              }
+              .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #25c760;
+                border-radius: 6px;
+                border: 2px solid #000;
+              }
+              .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+                background: #1ea550;
+              }
+            `}</style>
             <div
-              className="bg-black border-2 border-[#25c760] rounded-lg w-full max-w-5xl max-h-[95vh] overflow-y-auto"
+              className="custom-scrollbar bg-black border-2 border-[#25c760] rounded-lg w-full max-w-5xl max-h-[95vh] overflow-y-auto"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Close Button */}

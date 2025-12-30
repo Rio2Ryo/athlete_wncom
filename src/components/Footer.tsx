@@ -158,7 +158,7 @@ export default function Footer() {
         <div className="container mx-auto px-4 pt-2 pb-6">
           <div className="text-center space-y-4">
            
-            <div className="text-[#25C760] text-[clamp(8px,2vw,10px)] md:text-sm whitespace-pre-line">
+            <div className="text-[#25C760] text-xs md:text-sm whitespace-pre-line">
               {t({
                 JP: '© 2025 MOTHER VEGETABLE PROJECT.\nAll rights reserved.',
                 EN: '© 2025 MOTHER VEGETABLE PROJECT.\nAll rights reserved.'
