@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef } from 'react'
+import { useLanguage } from '@/contexts/LanguageContext'
 
 // Before/After比較スライダーコンポーネント
 function CompareSlider({ beforeImage, afterImage }: { beforeImage: string; afterImage: string }) {
@@ -82,6 +83,7 @@ function CompareSlider({ beforeImage, afterImage }: { beforeImage: string; after
 }
 
 export default function IndustryApproach() {
+  const { language } = useLanguage()
   const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   // Before/Afterデータ
@@ -144,12 +146,18 @@ export default function IndustryApproach() {
     },
   ]
 
-  const nutrients = [
+  const nutrients = language === 'JP' ? [
     { name: 'しみ', count: 'そばかす' },
     { name: 'ニキビ', count: 'ニキビ跡' },
     { name: 'キズ', count: 'キズ跡、やけど跡' },
     { name: 'ニオイ', count: '顔・首・脇・Vゾーン・足' },
     { name: 'ツヤ・清潔感', nameMobile: ['ツヤ・清潔感', '自然な'], count: '自然なトーンアップ' },
+  ] : [
+    { name: 'Dark Spots', count: 'Freckles' },
+    { name: 'Acne', count: 'Acne scars' },
+    { name: 'Wounds', count: 'Scars, Burn Marks' },
+    { name: 'Odor', nameMobile: ['Odor', 'Face, Neck,'], count: 'Face, Neck, Underarms, V-Zone, Feet' },
+    { name: 'Shine', nameMobile: ['Shine', 'Maintains A Clean'], count: 'Maintains A Clean Look, Natural/ Earth Tones' },
   ]
 
   const nutrientsList = 'カリウム・ナトリウム・マグネシウム・カルシウム・リン・鉄・マンガン・亜鉛・銅・ビタミンA・B1・B2・B3・B5・B6・B9・C・E・K・トリプトファン・スレオニン・ロイシン・イソロイシン・リシン・メチオニン・フェニルアラニン・バリン・ヒスチジン・アルギニン・システイン・チロシン・アラニン・アスパラギン酸・グルタミン酸・セリン・グリシン・プロリン・飽和脂肪酸・オメガ3脂肪酸・オメガ6脂肪酸・C-フィコシアニン・クロロフィルa・総カロテノイド・核酸・スピルラン・グリコーゲン様多糖・β-グルカン様多糖・セルロース'
@@ -289,15 +297,31 @@ export default function IndustryApproach() {
         <div className="mt-12 md:mt-16">
           {/* Description Text */}
           <div className="text-center mb-6 md:mb-8 px-4">
-            <p className="text-white text-sm md:text-lg leading-relaxed">
-              世界の医療機関にて医薬品として手術後の傷の修復、
-            </p>
-            <p className="text-white text-sm md:text-lg leading-relaxed">
-              やけど跡の改善、がんの治療、肌のテカりなどに使用されている
-            </p>
-            <p className="text-white text-sm md:text-lg leading-relaxed">
-              医薬部外品認定マザーベジタブルによる肌の治癒が可能。
-            </p>
+            {language === 'JP' ? (
+              <>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  世界の医療機関にて医薬品として手術後の傷の修復、
+                </p>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  やけど跡の改善、がんの治療、肌のテカりなどに使用されている
+                </p>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  医薬部外品認定マザーベジタブルによる肌の治癒が可能。
+                </p>
+              </>
+            ) : (
+              <>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  Mother Vegetable, certified as a medical-grade quasi-drug, is trusted by medical institutions worldwide
+                </p>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  for its healing properties — used in post-surgery recovery, burn scar improvement, cancer care, and even
+                </p>
+                <p className="text-white text-sm md:text-lg leading-relaxed">
+                  to help control skin shine. It supports the skin's natural ability to heal and restore balance.
+                </p>
+              </>
+            )}
           </div>
 
           {/* Skin Video */}

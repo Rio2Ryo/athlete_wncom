@@ -1,17 +1,29 @@
 'use client'
 
+import { useLanguage } from '@/contexts/LanguageContext'
+
 export default function IndustryApproach() {
-  const nutrients = [
+  const { language } = useLanguage()
+
+  const nutrients = language === 'JP' ? [
     { name: 'ミネラル', count: '9種類' },
     { name: 'ビタミン', count: '10種類' },
     { name: 'アミノ酸', count: '18種類' },
     { name: '脂肪酸', count: '3種類' },
     { name: 'その他機能性成分', nameMobile: ['その他機能性', '成分'], count: '9種類' },
+  ] : [
+    { name: 'Essential Fatty Acids', nameMobile: ['Essential Fatty', 'Acids'], count: '9 types' },
+    { name: 'Amino Acids', count: '10 types' },
+    { name: 'Vital Vitamins', count: '18 types' },
+    { name: 'Key Minerals For Balance', nameMobile: ['Key Minerals For', 'Balance'], count: '3 types' },
+    { name: 'Other Functional Ingredients', nameMobile: ['Other Functional', 'Ingredients'], count: '9 types' },
   ]
 
-  const nutrientsList = 'カリウム・ナトリウム・マグネシウム・カルシウム・リン・鉄・マンガン・亜鉛・銅・ビタミンA・B1・B2・B3・B5・B6・B9・C・E・K・トリプトファン・スレオニン・ロイシン・イソロイシン・リシン・メチオニン・フェニルアラニン・バリン・ヒスチジン・アルギニン・システイン・チロシン・アラニン・アスパラギン酸・グルタミン酸・セリン・グリシン・プロリン・飽和脂肪酸・オメガ3脂肪酸・オメガ6脂肪酸・C-フィコシアニン・クロロフィルa・総カロテノイド・核酸・スピルラン・グリコーゲン様多糖・β-グルカン様多糖・セルロース'
+  const nutrientsList = language === 'JP'
+    ? 'カリウム・ナトリウム・マグネシウム・カルシウム・リン・鉄・マンガン・亜鉛・銅・ビタミンA・B1・B2・B3・B5・B6・B9・C・E・K・トリプトファン・スレオニン・ロイシン・イソロイシン・リシン・メチオニン・フェニルアラニン・バリン・ヒスチジン・アルギニン・システイン・チロシン・アラニン・アスパラギン酸・グルタミン酸・セリン・グリシン・プロリン・飽和脂肪酸・オメガ3脂肪酸・オメガ6脂肪酸・C-フィコシアニン・クロロフィルa・総カロテノイド・核酸・スピルラン・グリコーゲン様多糖・β-グルカン様多糖・セルロース'
+    : 'Potassium, sodium, magnesium, calcium, phosphorus, iron, manganese, zinc, copper, Vitamin A, B1, B2, B3, B5, B6, B9, C, E, K, tryptophan, threonine, leucine, isoleucine, lysine, methionine, phenylalanine, valine, histidine, arginine, cystine, tyrosine, alanine, aspartic acid, glutamic acid, serine, glycine, proline, saturated fatty acids, omega-3 fatty acids, omega-6 fatty acids, C-phycocyanin, chlorophyll a, total carotenoids, nucleic acids, spirulan, glycogen-like polysaccharides, β-glucan-like polysaccharides, cellulose.'
 
-  const categories = [
+  const categories = language === 'JP' ? [
     {
       title: 'チルドレン',
       image: '/children.png',
@@ -41,6 +53,37 @@ export default function IndustryApproach() {
       title: 'キャット',
       image: '/cat.png',
       benefits: ['涙やけの改善', '糞尿のにおい改善', '食欲増強', '腸内環境の改善', '深い睡眠', '体臭改善'],
+    },
+  ] : [
+    {
+      title: 'Children',
+      image: '/children.png',
+      benefits: ['Improves concentration', 'Enhances learning ability', 'Supports bone growth', 'Boosts immunity', 'Increases appetite'],
+    },
+    {
+      title: 'Adults',
+      image: '/alduts.png',
+      benefits: ['Improves constipation and digestion', 'Enhances sleep quality', 'Reduces fatigue', 'Suppresses cellular aging and inflammation', 'Supports dieting'],
+    },
+    {
+      title: 'Seniors',
+      image: '/seniors.png',
+      benefits: ['Improves sleep quality and blood circulation', 'Boosts appetite and nutrient intake', 'Supports internal organ function', 'Promotes bone density'],
+    },
+    {
+      title: 'Athletes',
+      image: '/athletes.png',
+      benefits: ['Detoxifies additives', 'Aids muscle recovery and improves endurance', 'Provides efficient nutrient absorption', 'Reduces inflammation and supports recovery', 'Enhances training effectiveness'],
+    },
+    {
+      title: 'Dog',
+      image: '/dog.png',
+      benefits: ['Reduces tear stains', 'Improves waste odor', 'Increases appetite', 'Supports digestive health', 'Promotes deep sleep', 'Reduces body odor'],
+    },
+    {
+      title: 'Cat',
+      image: '/cat.png',
+      benefits: ['Reduces tear stains', 'Improves waste odor', 'Increases appetite', 'Supports digestive health', 'Promotes deep sleep', 'Reduces body odor'],
     },
   ]
 
