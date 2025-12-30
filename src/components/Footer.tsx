@@ -62,10 +62,7 @@ export default function Footer() {
       </div>*/}
 
       {/* Countries Section - Small Version */}
-      <div className="container mx-auto px-4 pt-4 pb-2 mb-0">
-        {/* Decorative underline - Full width above logo */}
-        <div className="w-full h-0.5 bg-gradient-to-r from-transparent via-[#25C760] to-transparent mb-4"></div>
-
+      <div className="container mx-auto px-4 pt-4 pb-2 mb-0 border-t border-green-400">
         {/* Logo */}
         <div className="flex justify-center mb-2">
           <Image
