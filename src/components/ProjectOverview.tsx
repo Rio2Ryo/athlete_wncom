@@ -55,7 +55,7 @@ export default function ProjectOverview() {
             </p>
 
             {/* Mobile View */}
-            <p className="block md:hidden leading-[2] whitespace-pre-line">
+            <p className="block md:hidden leading-[2] whitespace-pre-line text-[10px]">
               {language === 'JP' ? (
                 <>
                   MOTHER VEGETABLE PROJECTは{'\n'}2つのオンリーワン事業を中心として地球とすべての生命の回復を目指す世界唯一のプロジェクトです。{'\n\n'}このプロセスにおいて、各施設は24時間365日CO<sub>2</sub>を吸収し酸素を生成することで大気を浄化します。{'\n'}それと同時に生成されるマザーベジタブル製品および魚貝類の養殖業により、人間と生物の健康向上に貢献します。{'\n\n'}またその施設を世界各地に展開することで、さらに8つの産業分野に発展することが可能です。
