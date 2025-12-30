@@ -121,13 +121,13 @@ export default function Header() {
         />
         {/* Slide-in menu from right */}
         <div
-          className={`absolute top-0 right-0 h-full w-[80%] border-l-2 border-[#4ade80] transition-transform duration-300 ease-out ${
+          className={`absolute top-0 right-0 h-full w-[80%] border-l-2 border-[#4ade80] transition-transform duration-300 ease-out bg-black ${
             isMenuOpen ? 'translate-x-0' : 'translate-x-full'
           }`}
-          style={{ backgroundColor: '#000000' }}
+          style={{ backgroundColor: '#000000 !important', background: '#000000' }}
         >
           {/* Close button */}
-          <div className="flex justify-end p-4">
+          <div className="flex justify-end p-4 bg-black">
             <button
               onClick={() => setIsMenuOpen(false)}
               className="p-2 text-[#4ade80] hover:text-green-600 transition-all duration-300"
@@ -139,7 +139,7 @@ export default function Header() {
             </button>
           </div>
           {/* Menu items */}
-          <nav className="px-4 pt-8">
+          <nav className="px-4 pt-8 bg-black h-full">
             <button
               onClick={() => handleMenuClick('https://mothervegetable.com/')}
               className="block w-full text-left px-4 py-4 text-white hover:text-gray-300 transition-all duration-300 border-b border-gray-700"
