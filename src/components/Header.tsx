@@ -7,6 +7,7 @@ import { useLanguage } from '@/contexts/LanguageContext'
 export default function Header() {
   const [activeSection, setActiveSection] = useState('')
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isLangOpen, setIsLangOpen] = useState(false)
   const { language, setLanguage, t } = useLanguage()
 
   const scrollToSection = (sectionId: string) => {
@@ -71,53 +72,64 @@ export default function Header() {
               Products
             </button>
 
-            <div className="flex items-center border border-gray-600 rounded-md overflow-hidden">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsLangOpen(true)}
+              onMouseLeave={() => setIsLangOpen(false)}
+            >
               <button
-                onClick={() => setLanguage('EN')}
-                className={`px-3 py-1.5 text-sm transition-all duration-300 ${
-                  language === 'EN'
-                    ? 'bg-[#4ade80] text-black font-bold'
-                    : 'text-gray-400 hover:text-white'
-                }`}
+                className="px-4 py-2 text-sm text-white border border-white rounded-md"
               >
-                EN
+                {language === 'JP' ? '日' : 'EN'}
               </button>
-              <button
-                onClick={() => setLanguage('JP')}
-                className={`px-3 py-1.5 text-sm transition-all duration-300 ${
-                  language === 'JP'
-                    ? 'bg-[#4ade80] text-black font-bold'
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                JP
-              </button>
+              {isLangOpen && (
+                <div className="absolute top-full left-0 mt-1 bg-[#25c760] rounded-md overflow-hidden min-w-full">
+                  <button
+                    onClick={() => { setLanguage('EN'); setIsLangOpen(false); }}
+                    className="block w-full px-4 py-2 text-sm text-black hover:bg-[#1ea550] text-left"
+                  >
+                    Eng
+                  </button>
+                  <button
+                    onClick={() => { setLanguage('JP'); setIsLangOpen(false); }}
+                    className="block w-full px-4 py-2 text-sm text-black hover:bg-[#1ea550] text-left"
+                  >
+                    日
+                  </button>
+                </div>
+              )}
             </div>
           </nav>
 
           {/* Mobile: Language Button + Hamburger */}
           <div className="flex md:hidden items-center space-x-2">
-            <div className="flex items-center border border-gray-600 rounded-md overflow-hidden">
+            <div
+              className="relative"
+              onMouseEnter={() => setIsLangOpen(true)}
+              onMouseLeave={() => setIsLangOpen(false)}
+            >
               <button
-                onClick={() => setLanguage('EN')}
-                className={`px-2 py-1.5 text-xs transition-all duration-300 ${
-                  language === 'EN'
-                    ? 'bg-[#4ade80] text-black font-bold'
-                    : 'text-gray-400 hover:text-white'
-                }`}
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="px-3 py-1.5 text-sm text-white border border-white rounded-md"
               >
-                EN
+                {language === 'JP' ? '日' : 'EN'}
               </button>
-              <button
-                onClick={() => setLanguage('JP')}
-                className={`px-2 py-1.5 text-xs transition-all duration-300 ${
-                  language === 'JP'
-                    ? 'bg-[#4ade80] text-black font-bold'
-                    : 'text-gray-400 hover:text-white'
-                }`}
-              >
-                JP
-              </button>
+              {isLangOpen && (
+                <div className="absolute top-full left-0 mt-1 bg-[#25c760] rounded-md overflow-hidden min-w-full z-50">
+                  <button
+                    onClick={() => { setLanguage('EN'); setIsLangOpen(false); }}
+                    className="block w-full px-3 py-1.5 text-sm text-black hover:bg-[#1ea550] text-left"
+                  >
+                    Eng
+                  </button>
+                  <button
+                    onClick={() => { setLanguage('JP'); setIsLangOpen(false); }}
+                    className="block w-full px-3 py-1.5 text-sm text-black hover:bg-[#1ea550] text-left"
+                  >
+                    日
+                  </button>
+                </div>
+              )}
             </div>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
