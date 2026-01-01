@@ -61,9 +61,6 @@ export default function AthleteTestimonial() {
                 <p className="text-[#25c760] text-xs md:text-sm font-semibold">
                   {language === 'JP' ? '永原 和可那' : 'Wakana Nagahara'}
                 </p>
-                <p className="text-gray-400 text-[10px] md:text-xs">
-                  {language === 'JP' ? 'バドミントン世界選手権 2連覇' : '2-TIME WORLD BADMINTON CHAMPION'}
-                </p>
               </div>
             </div>
           ))}
