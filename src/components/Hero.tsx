@@ -94,7 +94,7 @@ export default function Hero() {
             className="block md:hidden"
             style={{
               position: 'absolute',
-              top: '-25px',
+              top: '-40px',
               right: '-20px',
               zIndex: 0,
             }}
