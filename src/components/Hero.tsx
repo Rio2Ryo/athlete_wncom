@@ -95,7 +95,7 @@ export default function Hero() {
             style={{
               position: 'absolute',
               top: '-15px',
-              right: '0px',
+              right: '-15px',
               zIndex: 0,
             }}
           >
