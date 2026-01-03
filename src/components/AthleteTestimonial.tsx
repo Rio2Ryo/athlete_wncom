@@ -7,16 +7,16 @@ export default function AthleteTestimonial() {
 
   const testimonials = [
     {
-      product: 'Achieve',
+      title: language === 'JP' ? '故郷への想い' : 'For My Hometown',
       comment: language === 'JP'
-        ? '試合が続くと、どうしても体が重くなったり、疲れが抜けにくくなるんです。でもAchieveを飲み始めてから、朝の目覚めが全然違う。48種類の栄養が一度に摂れるから、サプリをあれこれ考えなくていいのも楽ですね。遠征先でも手軽に栄養補給できるので、今では手放せない存在になっています。'
-        : "When matches pile up, my body gets heavy and fatigue just won't go away. But since I started taking Achieve, my mornings feel completely different. Getting 48 nutrients at once means I don't have to think about which supplements to take. It's easy to use even when traveling for tournaments—now I can't imagine being without it."
+        ? '私は北海道・十勝で生まれ育ちました。自然豊かな故郷で過ごした時間が、今の私を作ってくれたと思っています。このプロジェクトでは、故郷に「Small Earth Factory」を作ることができると聞いて、すぐに参加を決めました。アスリートとして世界で戦ってきた経験を、地元の子どもたちや地域の発展に還元できる。それが私にとって一番の喜びです。'
+        : "I was born and raised in Tokachi, Hokkaido. The time I spent in my hometown, surrounded by nature, shaped who I am today. When I heard this project could bring a 'Small Earth Factory' to my hometown, I decided to join right away. Being able to give back to the local children and community development through my experience competing on the world stage—that's what brings me the greatest joy."
     },
     {
-      product: 'Confidence',
+      title: language === 'JP' ? '地球と未来への恩返し' : 'Giving Back to Earth & Future',
       comment: language === 'JP'
-        ? '正直、練習や試合で汗だくになる毎日で、スキンケアなんて後回しになりがちでした。でもConfidenceは塗るだけでいいから続けられる。気づいたら肌の調子が良くなっていて、メイクしなくても「肌きれいだね」って言われるようになりました。アスリートでも女性としてきれいでいたい、その気持ちを叶えてくれています。'
-        : "Honestly, with all the sweating from practice and matches every day, skincare always took a back seat. But Confidence is so simple—just apply it and you're done. Before I knew it, my skin got better, and people started saying my skin looks great even without makeup. It lets me feel beautiful as a woman, even as an athlete."
+        ? 'アスリートとして、体が資本だからこそ、自然の力や地球の恵みに支えられてきたことを実感しています。35億年前から続く生命の力を持つマザーベジタブル。このプロジェクトを通じて、地球環境を守りながら、次世代のアスリートや若者たちが健康に成長できる未来を作りたい。私が受け取ったものを、地球と未来に返していきたいんです。'
+        : "As an athlete, my body is everything—and I've come to realize how much I've been supported by the power of nature and the blessings of the Earth. Mother Vegetable carries the life force that has existed for 3.5 billion years. Through this project, I want to protect our environment while creating a future where the next generation of athletes and young people can grow up healthy. I want to give back to the Earth and the future what I've received."
     },
   ]
 
@@ -52,7 +52,7 @@ export default function AthleteTestimonial() {
                 className="text-base md:text-xl font-bold mb-3 md:mb-4"
                 style={{ color: '#25c760' }}
               >
-                {item.product}
+                {item.title}
               </h4>
               <p className="text-gray-300 text-xs md:text-sm leading-relaxed flex-1">
                 「{item.comment}」
